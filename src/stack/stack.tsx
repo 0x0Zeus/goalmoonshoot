@@ -1,0 +1,1 @@
+export const basic_url = `https://livelikekong.ngrok.app/api/v1/`
