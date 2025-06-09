@@ -48,14 +48,14 @@ const ArticleDetail = () => {
       <div className="container mx-auto font-inter">
         <div className="px-4">
           <div className="mx-auto max-w-[900px] px-1.5 space-y-5">
-            <div className="mt-[100px] text-xl font-bold md:mt-[180px] md:text-2xl lg:text-4xl">
+            <div className="mt-[100px] text-xl font-bold md:mt-[180px] md:text-2xl lg:text-4xl text-white">
               {detailData?.title}
             </div>
             <div className="flex items-center justify-between">
               <div className="w-fit font-medium text-sm text-black rounded-full bg-[#FDE047] px-[14px] py-1">
                 Featured
               </div>
-              <div className="text-base font-medium text-[#000000]/80">
+              <div className="text-base font-medium text-[#ffffff]/80">
                 <span>
                   {moment(detailData?.created_at).format(
                     "YYYY/MM/DD",
@@ -64,7 +64,7 @@ const ArticleDetail = () => {
               </div>
             </div>
 
-            <div className="article-content">
+            <div className="article-content text-white">
               {detailData !== undefined && parse(detailData.contents)}
             </div>
           </div>

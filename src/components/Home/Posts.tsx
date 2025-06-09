@@ -1,6 +1,7 @@
 import moment from "moment";
 import RelatedPersonSay from "./RelatedPersonSay";
 import { Pagination } from "antd";
+import '@/styles/custom-antd-pagination.css';
 
 interface DataItem {
   category_id: number;
@@ -24,7 +25,7 @@ const Posts = ({
   onChange: any;
 }) => {
   return (
-    <div className="posts-bg rounded-[12px] sm:rounded-[20px] bg-white px-4 sm:px-6 md:px-[50px] pt-8 sm:pt-12 md:pt-[100px]">
+    <div className="posts-bg rounded-[12px] sm:rounded-[20px] bg-[#0E2115] px-4 sm:px-6 md:px-[50px] pt-8 sm:pt-12 md:pt-[100px]">
       <div className="space-y-10">
         {allData.map((item, index) => {
           return (

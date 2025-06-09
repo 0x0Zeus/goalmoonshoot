@@ -110,11 +110,11 @@ const HomePage = () => {
   return (
     <div className="font-inter">
       <Hero />
-      <div className="bg-gradient-to-b from-[#FF6B6B] via-[#FFD93D] to-[#4ECDC4]">
+      <div className="bg-gradient-to-b from-[#031008] to-[#000701]">
         <Music />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-10 px-4 py-10 pb-16 text-center md:space-y-20 md:py-20 md:pb-32">
-            <h1 className="text-4xl font-black text-black/80 sm:text-5xl md:text-6xl lg:text-[64px]">
+            <h1 className="text-4xl font-black text-[#C6A353]/80 sm:text-5xl md:text-6xl lg:text-[64px]">
               Latest Posts
             </h1>
             <div className="flex flex-col items-center justify-between gap-6 lg:flex-row lg:items-start lg:gap-10">
@@ -124,13 +124,13 @@ const HomePage = () => {
                 onChange={onChange}
               />
               <div className="w-full shrink-0 space-y-6 md:space-y-[30px] lg:w-[350px]">
-                <div className="rounded-[20px] bg-white px-6 py-8 md:px-12 md:py-10 space-y-5">
+                <div className="rounded-[20px] bg-[#0E2115] px-6 py-8 md:px-12 md:py-10 space-y-5">
                   <div className="relative w-full">
                     <input
                       id="search-bar"
                       type="text"
                       placeholder="Search"
-                      className="h-10 w-full rounded-full border border-[#FDE047] bg-[#FFFFFF] pl-4 pr-8 text-sm text-black placeholder:text-[#808080] md:h-12 md:text-base"
+                      className="h-10 w-full rounded-full border border-[#313131] bg-[#031008] pl-4 pr-8 text-sm text-white/90 placeholder:text-[#808080] md:h-12 md:text-base focus:outline-none"
                       onChange={(e) => handleChange(e.target.value)}
                       onKeyDown={(e) => handleSearch(e)}
                     />

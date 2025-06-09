@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const Footer: FC = () => {
   return (
-    <footer className="w-full bg-gradient-to-r from-[#9333EA] to-[#DB2777] font-spaceGrotesk text-[#FDE047] text-sm md:text-base font-bold">
-      <div className="container mx-auto">
-        <div className="px-4 h-20 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 sm:gap-0">
+    <footer className="w-full bg-[#000701] font-spaceGrotesk text-[#C6A353] text-sm md:text-base font-bold h-20 border-t border-[#ffffff]/20">
+      <div className="container mx-auto  h-full">
+        <div className="px-4 h-full flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 sm:gap-0">
           <span className="text-center sm:text-left">
             ©livelikekong. All rights reserved.
           </span>

@@ -12,7 +12,7 @@ const BlogsPage1 = () => {
                 className="h-[124px] w-full rounded-xl border-4 object-cover object-center"
               />
             </div>
-            <div className="col-span-3">
+            <div className="col-span-3 text-white">
               <h1 className="mb-5 text-2xl font-bold text-justify line-clamp-1">
                 Discovering the World of Luxury Yachting
               </h1>
@@ -22,7 +22,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="!border-[#ffffff]/20" />
         <NavLink to="/blogs/2">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -31,7 +31,7 @@ const BlogsPage1 = () => {
                 className="h-[124px] w-full rounded-xl border-4 object-cover object-center"
               />
             </div>
-            <div className="col-span-3">
+            <div className="col-span-3 text-white">
               <h1 className="mb-5 text-2xl font-bold text-justify line-clamp-1">
                 Kong's Caribbean Cruise: Luxury and Laughter
               </h1>
@@ -41,7 +41,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        {/* <hr />
+        {/* <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/gold-investment-physical-vs-etfs">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -60,7 +60,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/bulletproof-wealth-with-gold-inflation">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -79,7 +79,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/role-of-gold-diversified-portfolio">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -98,7 +98,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/gold-coins-vs-gold-bars-investment">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -117,7 +117,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/top-gold-investment-strategies-2024">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -136,7 +136,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/how-central-banks-shape-gold-market">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -155,7 +155,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/environmental-impact-gold-mining-responsible-investing">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">

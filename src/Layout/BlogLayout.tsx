@@ -9,7 +9,7 @@ const BlogLayout = () => {
           <NavLink to="/blogs/page1">
             {
               ({ isActive }) => (
-                <button className={`${isActive ? 'bg-[#00000044]' : 'bg-transparent'} h-10 w-10 border text-center hover:bg-[#00000044] active:scale-75 transition-all origin-center`}>1</button>
+                <button className={`${isActive ? 'bg-[#00000044]' : 'bg-transparent'} rounded-lg  h-10 w-10 border border-[#313131] bg-[#031008] text-white text-center hover:bg-[#00000044] active:scale-75 transition-all origin-center`}>1</button>
               )
             }
           </NavLink>
