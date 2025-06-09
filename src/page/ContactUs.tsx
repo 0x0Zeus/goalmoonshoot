@@ -34,14 +34,14 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-[#FF6B6B] via-[#FFD93D] to-[#4ECDC4] min-h-[calc(100vh-160px)]">
+      <div className="bg-gradient-to-b from-[#FF6B6B] via-[#FFD93D] to-[#4ECDC4] min-h-[calc(100vh-80px)]">
         <div className="container mx-auto px-4 sm:px-6 py-20">
           <h1 className="font-inter font-black text-3xl sm:text-4xl md:text-[64px] text-[#000000]/80 music-title text-center pt-10 sm:pt-20">
             Contact Us
           </h1>
-          <div className="max-w-[1096px] w-full mx-auto mt-6 sm:mt-12 grid gap-6 md:grid-cols-2">
-            <div className="flex flex-col gap-6 sm:gap-8 rounded-xl bg-white px-4 sm:px-6 py-6 sm:py-8 md:justify-between md:gap-0 md:px-[44px] md:py-12">
-              <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
+          <div className="max-w-[1096px] w-full mx-auto mt-6 sm:mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="flex flex-col gap-6 sm:gap-8 rounded-xl bg-white px-4 sm:px-6 py-6 sm:py-8 md:justify-start md:gap-8 md:px-[44px] md:py-12">
+              {/* <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
                 <div className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[68px] md:w-[68px] shrink-0 content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#DB2777] to-[#9333EA] text-center">
                   <img
                     src="/icons/phone.png"
@@ -57,7 +57,7 @@ const ContactUs = () => {
                     +1 234 567 8900
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
                 <div className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[68px] md:w-[68px] shrink-0 content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#DB2777] to-[#9333EA] text-center">
                   <img
@@ -75,7 +75,7 @@ const ContactUs = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
+              {/* <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
                 <div className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[68px] md:w-[68px] shrink-0 content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#DB2777] to-[#9333EA] text-center">
                   <img
                     src="/icons/map.png"
@@ -91,7 +91,7 @@ const ContactUs = () => {
                     90 Richmond Hill road, 1M S.I, New York 10314
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="space-y-4 rounded-xl bg-white p-4 font-spaceGrotesk text-[#0f0f0f] md:space-y-6 md:p-6">
               <div className="">
