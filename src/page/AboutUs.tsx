@@ -8,7 +8,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 font-inter sm:px-6 md:px-8 text-white">
+      <div className="container mx-auto px-4 font-inter sm:px-6 md:px-8 text-white ">
         <div className="mx-auto max-w-[850px] space-y-4 pb-4 pt-[100px] sm:space-y-5 sm:pb-6 sm:pt-[120px] md:pb-20 md:pt-[150px]">
           <p className="text-base sm:text-lg md:text-lg">
             Welcome to Live Like Kong – where legends are minted, memes reign
