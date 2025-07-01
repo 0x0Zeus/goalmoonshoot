@@ -9,7 +9,7 @@ const Social = () => {
         </h1>
         <div className="mx-auto mt-6 w-full max-w-[1096px] space-y-8 sm:mt-12 sm:space-y-[56px]">
           <div className="space-y-2 sm:space-y-3">
-            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl">
+            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl mb-3">
               YouTube Channel
             </p>
             <Link to={"https://www.youtube.com/@livelikekong"}>
@@ -21,7 +21,7 @@ const Social = () => {
             </Link>
           </div>
           <div className="space-y-2 sm:space-y-3">
-            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl">
+            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl mb-3">
               Twitter Channel
             </p>
             <Link to={"https://x.com/LiveLikeKong"}>
@@ -33,7 +33,19 @@ const Social = () => {
             </Link>
           </div>
           <div className="space-y-2 sm:space-y-3">
-            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl">
+            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl mb-3">
+              Tiktok Channel
+            </p>
+            <Link to={"https://www.tiktok.com/@livelikekong"}>
+              <img
+                src="/images/tiktok.png"
+                alt="tiktok"
+                className="max-h-[300px] w-full rounded-[16px] border-[4px] border-[#C6A353] object-cover sm:max-h-[450px] sm:rounded-[32px]"
+              />
+            </Link>
+          </div>
+          <div className="space-y-2 sm:space-y-3">
+            <p className="text-2xl font-black leading-tight text-[#ffffff]/80 sm:text-3xl sm:leading-[64px] md:text-4xl mb-3">
               DexTools
             </p>
             <iframe

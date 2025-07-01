@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 import { Dropdown, MenuProps } from "antd";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 // import SubscribeModal from "./SubscribeModal";
 
 function Header() {
@@ -88,15 +88,27 @@ function Header() {
 
             <div className="flex items-center gap-5">
               
-              <Link to="https://x.com/ArtsTrader" className="text-white max-md:hidden">
+              <Link to="https://www.youtube.com/@livelikekong" className="text-white max-md:hidden">
+                <FaYoutube size={24} />
+              </Link>
+              <Link to="https://x.com/LiveLikeKong" className="text-white max-md:hidden">
                 <FaXTwitter size={24} />
+              </Link>
+              <Link to="https://www.tiktok.com/@livelikekong" className="text-white max-md:hidden">
+                <FaTiktok size={24} />
               </Link>
             </div>
 
             {/* Mobile Dropdown Menu */}
             <div className="md:hidden flex gap-5 items-center">
-              <Link to="https://x.com/ArtsTrader" className="text-white">
+              <Link to="https://www.youtube.com/@livelikekong" className="text-white">
+                <FaYoutube size={24} />
+              </Link>
+              <Link to="https://x.com/LiveLikeKong" className="text-white">
                 <FaXTwitter size={24} />
+              </Link>
+              <Link to="https://www.tiktok.com/@livelikekong" className="text-white">
+                <FaTiktok size={24} />
               </Link>
               <Dropdown
                 menu={{ items }}
