@@ -1,63 +1,82 @@
-# TypeScript React Tailwind Vite Template
+# 🦍 LIVE LIKE KONG
 
-This template provides a starting point for creating React projects with TypeScript, Tailwind CSS, and Vite.
+![Live Like Kong](public/icons/logo.png)
 
-## Overview
+## 🌐 Live Website
+[www.livelikekong.com](https://www.livelikekong.com)
 
-This template allows you to quickly set up a React project with TypeScript, Tailwind CSS, and Vite. It provides a modern development environment with features such as hot module replacement and fast refresh, making it easy to develop and customize your React applications.
+## 🎯 About
+Live Like Kong is a premier marketing website for the $KONG token, embodying the spirit of luxury, community, and the king of the jungle. From the Jungle to the Moon, we're building a community passionate about living life well, creating wealth, and having fun along the way.
 
-## Features
+## 🎵 Music Section
+- Featured artist on [Spotify](https://open.spotify.com/artist/1r1HJUOhdqtg6BA2wNSJyO?si=cV8Kt3cuQhaxuZWUcULEFw)
+- 7 promotional songs available
+- Musical elements featuring banana-shaped notes and sheet music
 
-- TypeScript: Develop with confidence using static type-checking and improved tooling.
+## 📱 Social Media
+- Twitter: [@LiveLikeKong](https://x.com/LiveLikeKong)
+- YouTube: [@KN6K0N6](https://www.youtube.com/@KN6K0N6) (Temporary)
+- YouTube: [@livelikekong](https://www.youtube.com/@livelikekong) (Coming Soon)
 
-- React: Build dynamic user interfaces with the popular React library.
+## 💰 Token Information
+- Token: $KONG
+- DEXTools Chart: [View Live Chart](https://www.dextools.io/app/en/solana/pair-explorer/4uCWVvu7MPukR5uRtN9DZFjKFSMnhyaewnbTEA5PANnY?t=1748469951495)
 
-- Tailwind CSS: Easily style and customize your components using the utility-first approach of Tailwind CSS.
+## 📝 Blog Categories
+Our AI-powered daily blogs cover:
+1. Luxury Travel & Destinations
+   - Hotels
+   - Resorts
+   - Caribbean destinations
+2. Luxury Assets
+   - Exotic cars
+   - Collectible cars
+   - High-end watches and jewelry
+   - Yachts and speedboats
+   - Private jets
+   - Race horses
+3. High-end Real Estate
+   - Mega mansions worldwide
+4. Art & Collectibles
+   - Famous artwork
+   - Rare collectibles
+5. Entertainment
+   - Famous casinos
+   - Yacht week
+   - F1 Grand Prix
+   - Art Basel
+   - Polo clubs
 
-- Vite: Enjoy fast development and instant hot module replacement with Vite's lightning-fast dev server.
+## 🎨 Design Elements
+- Theme: Royal and luxurious
+- Primary Colors: Gold and yellow
+- Key Elements:
+  - Crown and chain motifs
+  - Banana-themed decorations
+  - NFT-style banana elements
+  - Musical notes and sheet music
+  - Community-focused design
 
-## Installation
+## 📰 RSS Feed Topics
+- Luxury lifestyle
+- Millionaire and Billionaire news
 
-To create a new project using this template, follow these steps:
+## 🔗 Important Links
+- DEXTools Widget: Embedded chart for real-time token tracking
+- Promotional Songs: [iCloud Link](https://share.icloud.com/photos/03bPAEhxqYup0LwdmA7BcJoxQ)
 
-1. Ensure that you have Node.js installed on your machine.
-2. Open a terminal and navigate to the directory where you want to create your project.
-3. Run the following command to create a new project using the template:
-
-```bash
-npx create-vite@latest --template typescript-react-tailwind-vite my-project
+## 📄 Contract Information
+```
+BS4oD5UnGUHeH1n8RyjG4eCMXLD8piHTZHhyq4E7KYpb
 ```
 
-Replace my-project with the desired name for your project.
+## 🛠️ Technical Stack
+- React
+- TypeScript
+- Vite
+- Font Awesome
+- Google Analytics
+- Custom fonts (Inter, Space Grotesk, Black Ops One)
 
-4. Once the command completes, navigate into the project directory:
-
-```bash
-cd my-project
-```
-
-5. Install the dependencies:
-
-```bash
-npm install
-```
-
-## Usage
-
-To start the development server and run the project, use the following command:
-
-```bash
-npm run dev
-```
-
-This will start the development server and open your project in the browser. Any changes you make to the source code will be automatically reflected in the browser.
-
-## Building for Production
-
-To build the project for production, use the following command:
-
-```bash
-npm run build
-```
-
-This will create an optimized build of your project in the dist directory.
+## 📜 License
+All rights reserved © Live Like Kong

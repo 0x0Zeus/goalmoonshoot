@@ -4,44 +4,44 @@ const BlogsPage1 = () => {
   return (
     <div className="flex justify-center">
       <div className="flex w-[80%] max-w-[800px] flex-col gap-5">
-        <NavLink to="/blogs/gold-investment-shield-against-volatility-inflation">
+        <NavLink to="/blogs/1">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
               <img
-                src="/images/blogs/1/1.webp"
+                src="/images/blogs/1/1.jpg"
                 className="h-[124px] w-full rounded-xl border-4 object-cover object-center"
               />
             </div>
-            <div className="col-span-3">
+            <div className="col-span-3 text-white">
               <h1 className="mb-5 text-2xl font-bold text-justify line-clamp-1">
-                Gold Investment: Your Shield Against Market Volatility and Inflation
+                Discovering the World of Luxury Yachting
               </h1>
               <p className="text-justify line-clamp-3">
-                Discover how gold investments can safeguard your wealth during times of market volatility and inflation. Learn why gold is a trusted asset in uncertain economic times.
+                Embark on a journey of opulence and exploration as we delve into the captivating world of luxury yachting. Whether you're seeking a romantic escape, a family adventure, or a unique expedition, luxury yachting offers unparalleled experiences tailored to your desires.
               </p>
             </div>
           </div>
         </NavLink>
-        <hr />
-        <NavLink to="/blogs/gold-investment-beginners-guide">
+        <hr className="!border-[#ffffff]/20" />
+        <NavLink to="/blogs/2">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
               <img
-                src="/images/blogs/2/1.webp"
+                src="/images/blogs/2/1.jpg"
                 className="h-[124px] w-full rounded-xl border-4 object-cover object-center"
               />
             </div>
-            <div className="col-span-3">
+            <div className="col-span-3 text-white">
               <h1 className="mb-5 text-2xl font-bold text-justify line-clamp-1">
-                Gold Investment for Beginners: Your Step-by-Step Guide to Getting Started
+                Kong's Caribbean Cruise: Luxury and Laughter
               </h1>
               <p className="text-justify line-clamp-3">
-                Discover how to start investing in gold with this beginner-friendly guide. Learn about different gold investment options, benefits, and step-by-step instructions to secure your wealth.
+                Join me on my hilariously luxurious Caribbean cruise experience with Kong, where relaxation meets adventure in the most royal way possible. From diving deep into the azure seas to sipping cocktails under golden sunsets, this journey promises to tickle your funny bone while fulfilling your wanderlust.
               </p>
             </div>
           </div>
         </NavLink>
-        <hr />
+        {/* <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/gold-investment-physical-vs-etfs">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -60,7 +60,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/bulletproof-wealth-with-gold-inflation">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -79,7 +79,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/role-of-gold-diversified-portfolio">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -98,7 +98,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/gold-coins-vs-gold-bars-investment">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -117,7 +117,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/top-gold-investment-strategies-2024">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -136,7 +136,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/how-central-banks-shape-gold-market">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -155,7 +155,7 @@ const BlogsPage1 = () => {
             </div>
           </div>
         </NavLink>
-        <hr />
+        <hr className="text-[#ffffff]/20" />
         <NavLink to="/blogs/environmental-impact-gold-mining-responsible-investing">
           <div className="grid items-center grid-cols-4 gap-10 px-5">
             <div className="h-[124px] overflow-hidden">
@@ -191,7 +191,7 @@ const BlogsPage1 = () => {
               </p>
             </div>
           </div>
-        </NavLink>
+        </NavLink> */}
       </div>
     </div>
   )
