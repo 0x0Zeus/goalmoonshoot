@@ -1,130 +1,78 @@
-import { Link } from "react-router-dom";
-import { MenuOutlined } from "@ant-design/icons";
-import { Dropdown, MenuProps } from "antd";
-import { FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
-// import SubscribeModal from "./SubscribeModal";
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import axios, { AxiosResponse } from 'axios';
+// @ts-ignore
+import format from "date-format";
+import "./Header.css";
+import { basic_url } from '@/stack/stack';
+import { message } from 'antd';
 
 function Header() {
 
-  const items: MenuProps["items"] = [
-    {
-      label: (
-        <Link to={"/blogs"} className="text-base">
-          Feature Article
-        </Link>
-      ),
-      key: "0",
-    },
-    {
-      label: (
-        <Link to={"/aboutus"} className="text-base">
-          About Us
-        </Link>
-      ),
-      key: "1",
-    },
-    {
-      label: (
-        <Link to={"/contactus"} className="text-base">
-          Contact Us
-        </Link>
-      ),
-      key: "2",
-    },
-    {
-      label: (
-        <Link to={"/social"} className="text-base">
-          Contact Us
-        </Link>
-      ),
-      key: "2",
-    },
-    
-  ];
+    const [serverTime, setServerTime] = useState<number>(0);
+    const ref = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  return (
-    <>
-      <header className="bg-[#031008] fixed top-0 left-0 right-0 z-50">
-        <div className="container mx-auto ">
-          <div className="flex items-center justify-between px-4 h-20">
-            <Link to="/" className="flex items-center gap-3">
-              <img
-                src="/icons/logo.png"
-                alt="Logo"
-                className="h-[52px] w-auto"
-              />
-              <p className="text-center font-inter font-black text-3xl leading-[52px] text-[#FFBB00] w-fit max-[1200px]:hidden">
-                LIVE LIKE KONG
-              </p>
-            </Link>
+    useEffect(() => {
+        axios.get(`${basic_url}get_server_time`).then((res: AxiosResponse) => {
+            setServerTime(new Date(res.data).getTime());
+        }).catch(() => {
+            message.error("Server Time Error")
+        })
 
-            {/* Desktop Navigation */}
-            <ul className="hidden h-10 items-center rounded-full  font-spaceGrotesk md:flex ">
-              <Link
-                to="/blogs"
-                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold text-[#ffffff] transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
-              >
-                <li className="flex h-full items-center">Feature Article</li>
-              </Link>
-              <Link
-                to="/aboutus"
-                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold text-[#ffffff] transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
-              >
-                <li className="flex h-full items-center">About Us</li>
-              </Link>
-              <Link
-                to="/contactus"
-                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold text-[#ffffff] transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
-              >
-                <li className="flex h-full items-center">Contact Us</li>
-              </Link>
-              <Link
-                to="/social"
-                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold text-[#ffffff] transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
-              >
-                <li className="flex h-full items-center">Social</li>
-              </Link>
-            </ul>
+        ref.current = setInterval(() => {
+            setServerTime(time => time + 1000);
+        }, 1000);
 
-            <div className="flex items-center gap-5">
-              
-              <Link to="https://www.youtube.com/@livelikekong" className="text-white max-md:hidden">
-                <FaYoutube size={24} />
-              </Link>
-              <Link to="https://x.com/LiveLikeKong" className="text-white max-md:hidden">
-                <FaXTwitter size={24} />
-              </Link>
-              <Link to="https://www.tiktok.com/@livelikekong" className="text-white max-md:hidden">
-                <FaTiktok size={24} />
-              </Link>
+        return () => {
+            clearInterval(ref.current as ReturnType<typeof setInterval>);
+        }
+
+    }, [])
+
+    return (
+        <>
+            <div className='fixed z-10 w-full bg-black'>
+                <div className='container'>
+                    <header>
+                        <div className='flex items-center gap-6 max-md:h-[100px]'>
+                            <Link to="/">
+                                <div id='header-logo' className="w-[80px] h-[80px] cursor-pointer bg-[url('/icons/new-logo.png')] bg-no-repeat bg-[length:80px_80px]">
+                                </div>
+                            </Link>
+                            <div className='grow text-2xl text-[white]'>
+                                <div className='items-center hidden gap-6 py-4 pt-5 md:flex'>
+                                    <div className="block text-center grow">
+                                        GOLDEXCG is your gateway to a world of Gold news and financial commentary
+                                    </div>
+                                    <div className='hidden xl:block'>
+                                        {format("yyyy : MM : dd", new Date(serverTime))}
+                                    </div>
+                                </div>
+                                <div className='flex items-center justify-end sm:grid sm:grid-cols-2 xl:flex xl:justify-end'>
+                                    <div className='hidden pb-2 text-right border-b-4 border-transparent sm:block xl:hidden'>
+                                        {format("yyyy : MM : dd", new Date(serverTime))}
+                                    </div>
+                                    <div className='flex justify-end'>
+                                        <Link to="/blogs" className='px-4 pb-2 border-b-4 hover:border-[white] border-transparent transition-colors duration-300 ease-in-out group'>
+                                            <div className='px-2 py-1 transition-colors duration-300 ease-in-out bg-transparent rounded-lg group-hover:bg-gray-700 whitespace-nowrap'>Feature Articles</div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
             </div>
-
-            {/* Mobile Dropdown Menu */}
-            <div className="md:hidden flex gap-5 items-center">
-              <Link to="https://www.youtube.com/@livelikekong" className="text-white">
-                <FaYoutube size={24} />
-              </Link>
-              <Link to="https://x.com/LiveLikeKong" className="text-white">
-                <FaXTwitter size={24} />
-              </Link>
-              <Link to="https://www.tiktok.com/@livelikekong" className="text-white">
-                <FaTiktok size={24} />
-              </Link>
-              <Dropdown
-                menu={{ items }}
-                trigger={["click"]}
-                overlayClassName="mt-6 bg-[#ffffff] rounded-md select-none text-white"
-              >
-                <a onClick={(e) => e.preventDefault()}>
-                  <MenuOutlined color="white" size={24} className="text-white text-2xl" />
-                </a>
-              </Dropdown>
+            <div className="w-full bg-black md:hidden block mt-[100px] pb-2 z-0">
+                <div className="container">
+                    <header>
+                        <div className="static text-2xl text-[white] text-center">GOLDEXCG is your gateway to a world of Gold news and financial commentary</div>
+                    </header>
+                </div>
             </div>
-          </div>
-        </div>
-      </header>
-    </>
-  );
+            <div className="w-full h-[50px] lg:h-[120px]"></div>
+        </>
+    )
 }
-
 export default Header;
+
