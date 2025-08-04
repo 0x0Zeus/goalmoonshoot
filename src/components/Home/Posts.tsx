@@ -25,7 +25,7 @@ const Posts = ({
   onChange: any;
 }) => {
   return (
-    <div className="posts-bg rounded-[12px] sm:rounded-[20px] bg-[#0E2115] px-4 sm:px-6 md:px-[50px] pt-8 sm:pt-12 md:pt-[100px]">
+    <div className="  ">
       <div className="space-y-10">
         {allData.map((item, index) => {
           return (

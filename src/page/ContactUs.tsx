@@ -3,6 +3,8 @@ import { Form, Input, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import axios from "axios";
 import {} from "react-icons";
+import { FaTiktok, FaTwitter, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const validateMessages = {
   required: "${label} is required!",
@@ -35,71 +37,48 @@ const ContactUs = () => {
   return (
     <>
       <div className="min-h-[calc(100vh-80px)]">
-        <div className="container mx-auto px-4 sm:px-6 py-20">
-          <h1 className="font-inter font-black text-3xl sm:text-4xl md:text-[64px] text-[#FDE047]/80 music-title text-center pt-10 sm:pt-20">
-            Contact Us
-          </h1>
-          <div className="max-w-[1096px] w-full mx-auto mt-6 sm:mt-12 grid gap-6 lg:grid-cols-2">
-            <div className="flex flex-col gap-6 sm:gap-8 rounded-xl bg-[#0E2115] px-4 sm:px-6 py-6 sm:py-8 md:justify-start md:gap-8 md:px-[44px] md:py-12 text-white">
-              {/* <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
-                <div className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[68px] md:w-[68px] shrink-0 content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#DB2777] to-[#9333EA] text-center">
-                  <img
-                    src="/icons/phone.png"
-                    className="mx-auto w-4 sm:w-5 md:w-7"
-                    alt="phone"
-                  />
-                </div>
-                <div className="text-left text-[#000000]/80">
-                  <p className="text-lg sm:text-xl md:text-xl lg:text-2xl leading-[28px] sm:leading-[32px] md:leading-[48px]">
-                    Phone
-                  </p>
-                  <p className="text-base sm:text-lg md:text-lg lg:text-xl leading-[20px] sm:leading-[24px] md:leading-[32px]">
-                    +1 234 567 8900
-                  </p>
-                </div>
-              </div> */}
-              <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
-                <div className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[68px] md:w-[68px] shrink-0 content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#C6A353]/20 to-[#ffffff]/20 text-center">
-                  <img
-                    src="/icons/company.png"
-                    className="mx-auto w-4 sm:w-5 md:w-7"
-                    alt="Company"
-                  />
-                </div>
-                
-                <div className="text-left text-[#ffffff]/80">
-                  <p className="text-lg sm:text-xl md:text-xl lg:text-2xl leading-[28px] sm:leading-[32px] md:leading-[48px]">
-                    Company
-                  </p>
-                  <p className="text-base sm:text-lg md:text-lg lg:text-xl leading-[20px] sm:leading-[24px] md:leading-[32px]">
-                    VV, LLC Company
-                  </p>
+        <div className="container mx-auto px-4 py-20 sm:px-6">
+          <div className="relative">
+            <h1 className="music-title pb-20 pt-10 text-center font-inter text-3xl font-black text-white sm:pt-20 sm:text-4xl md:text-[64px]">
+              Contact Us
+            </h1>
+            <div className="absolute bottom-0 right-1/2 h-[200px] w-[400px] translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_100%,rgba(26,124,255,0.5)_0%,rgba(26,124,255,0)_100%)] sm:h-[300px] sm:w-[600px]"></div>
+          </div>
+          <div className="mx-auto mt-10 grid w-full max-w-[1096px] divide-x-[1px] divide-[#1A7CFF] rounded-2xl border border-[#1A7CFF] bg-[#1A7CFF]/10 sm:mt-16 lg:grid-cols-2">
+            <div className="flex flex-col gap-6 rounded-l-[15px] px-4 py-6 text-white sm:gap-8 sm:px-6 sm:py-8 md:justify-start md:gap-8 md:px-[44px] md:py-12">
+              <h1 className="text-lg font-medium text-[#ffffff]">Contact Us</h1>
+              <p className="text-2xl text-white">Let's Get In Touch</p>
+              <p>
+                Have a question, idea, or need help getting started? Our team is
+                here to support you. Drop us a message — we’d love to hear from
+                you!
+              </p>
+
+              <div className="space-y-5">
+                <p className="text-xl font-medium">Follow Us</p>
+                <div className="flex items-center gap-5">
+                  <Link
+                    to="https://www.youtube.com/@goal2moon"
+                    className="text-white max-md:hidden"
+                  >
+                    <FaYoutube size={24} />
+                  </Link>
+                  <Link
+                    to="https://x.com/@GoalToTheMoon"
+                    className="text-white max-md:hidden"
+                  >
+                    <FaXTwitter size={24} />
+                  </Link>
+                  <Link
+                    to="https://www.tiktok.com/@goal2moon"
+                    className="text-white max-md:hidden"
+                  >
+                    <FaTiktok size={24} />
+                  </Link>
                 </div>
               </div>
-              {/* <div className="flex items-center gap-3 sm:gap-4 md:gap-7">
-                <div className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[68px] md:w-[68px] shrink-0 content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#DB2777] to-[#9333EA] text-center">
-                  <img
-                    src="/icons/map.png"
-                    className="mx-auto w-4 sm:w-5 md:w-7"
-                    alt="map"
-                  />
-                </div>
-                <div className="text-left text-[#000000]/80">
-                  <p className="text-lg sm:text-xl md:text-xl lg:text-2xl leading-[28px] sm:leading-[32px] md:leading-[48px]">
-                    Address
-                  </p>
-                  <p className="text-base sm:text-lg md:text-lg lg:text-xl leading-[20px] sm:leading-[24px] md:leading-[32px]">
-                    90 Richmond Hill road, 1M S.I, New York 10314
-                  </p>
-                </div>
-              </div> */}
             </div>
-            <div className="space-y-4 rounded-xl bg-[#0E2115] p-4 font-spaceGrotesk text-[#ffffff] md:space-y-6 md:p-6">
-              <div className="">
-                <h1 className="text-lg sm:text-xl md:text-2xl font-medium text-[#ffffff]">
-                  Contact Us
-                </h1>
-              </div>
+            <div className="space-y-4 rounded-r-[15px] p-4 font-spaceGrotesk text-[#ffffff] md:space-y-6 md:p-6">
               <Form
                 name="nest-messages"
                 layout="vertical"
@@ -109,7 +88,7 @@ const ContactUs = () => {
                 className=""
                 validateMessages={validateMessages}
               >
-                <div className="flex flex-col sm:flex-row w-full items-center justify-between gap-4">
+                <div className="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
                   <Form.Item
                     name={["user"]}
                     label={
@@ -130,7 +109,7 @@ const ContactUs = () => {
                     <Input
                       size="large"
                       placeholder="Full name"
-                      className="h-11 sm:h-12 rounded-full border border-[#FDE047] bg-white/20 px-4 text-sm text-white placeholder:text-white/80"
+                      className="h-11 rounded-full border border-[#0077FF] bg-[#1A7CFF]/50 bg-[radial-gradient(50%_50%_at_50%_50%,#1A7CFF20_0%,#1A7CFF60_100%)] px-4 text-sm text-white placeholder:text-white/80 sm:h-12"
                     />
                   </Form.Item>
                   <Form.Item
@@ -153,7 +132,7 @@ const ContactUs = () => {
                     <Input
                       size="large"
                       placeholder="Your email"
-                      className="h-11 sm:h-12 rounded-full border border-[#FDE047] bg-white/20 px-4 text-sm  text-white placeholder:text-white/80"
+                      className="h-11 rounded-full border border-[#0077FF] bg-[#1A7CFF]/50 bg-[radial-gradient(50%_50%_at_50%_50%,#1A7CFF20_0%,#1A7CFF60_100%)] px-4 text-sm text-white  placeholder:text-white/80 sm:h-12"
                     />
                   </Form.Item>
                 </div>
@@ -177,13 +156,13 @@ const ContactUs = () => {
                   <TextArea
                     style={{ height: 120 }}
                     placeholder="Please enter your message ..."
-                    className="rounded-lg border border-[#FDE047] bg-white/20  text-white placeholder:text-white/80"
+                    className="rounded-lg border border-[#0077FF] bg-[#1A7CFF]/50 bg-[radial-gradient(50%_50%_at_50%_50%,#1A7CFF20_0%,#1A7CFF60_100%)]  text-white placeholder:text-white/80"
                   ></TextArea>
                 </Form.Item>
                 <Form.Item>
                   <button
                     type="submit"
-                    className="bg-[#C6A353] w-full rounded-full h-11 text-center text-black hover:bg-[#c41e6a] transition-colors"
+                    className="h-11 w-full rounded-full bg-[#1A7CFF] text-center text-white transition-colors hover:bg-[#1A7CFF]/50"
                     onClick={handleSendBtn}
                   >
                     Send

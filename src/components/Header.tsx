@@ -9,8 +9,8 @@ function Header() {
   const items: MenuProps["items"] = [
     {
       label: (
-        <Link to={"/blogs"} className="text-base">
-          Feature Article
+        <Link to={"/product"} className="text-base">
+          Product
         </Link>
       ),
       key: "0",
@@ -31,20 +31,11 @@ function Header() {
       ),
       key: "2",
     },
-    {
-      label: (
-        <Link to={"/social"} className="text-base">
-          Contact Us
-        </Link>
-      ),
-      key: "2",
-    },
-    
   ];
 
   return (
     <>
-      <header className="bg-[#031008] fixed top-0 left-0 right-0 z-50">
+      <header className="bg-[#ffffff20] fixed top-0 left-0 right-0 z-50 border-b border-[#FFFFFF19] backdrop-blur-xl">
         <div className="container mx-auto ">
           <div className="flex items-center justify-between px-4 h-20">
             <Link to="/" className="flex items-center gap-3">
@@ -53,18 +44,18 @@ function Header() {
                 alt="Logo"
                 className="h-[52px] w-auto"
               />
-              <p className="text-center font-inter font-black text-3xl leading-[52px] text-[#FFBB00] w-fit max-[1200px]:hidden">
-                LIVE LIKE KONG
+              <p className="text-center font-inter font-black text-3xl leading-[52px] text-[#FFFFFF] w-fit max-[1200px]:hidden">
+                GOAL MOON SHOOT
               </p>
             </Link>
 
             {/* Desktop Navigation */}
             <ul className="hidden h-10 items-center rounded-full  font-spaceGrotesk md:flex ">
               <Link
-                to="/blogs"
+                to="/product"
                 className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold text-[#ffffff] transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
-                <li className="flex h-full items-center">Feature Article</li>
+                <li className="flex h-full items-center">Product</li>
               </Link>
               <Link
                 to="/aboutus"
@@ -78,36 +69,29 @@ function Header() {
               >
                 <li className="flex h-full items-center">Contact Us</li>
               </Link>
-              <Link
-                to="/social"
-                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold text-[#ffffff] transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
-              >
-                <li className="flex h-full items-center">Social</li>
-              </Link>
             </ul>
 
             <div className="flex items-center gap-5">
-              
-              <Link to="https://www.youtube.com/@livelikekong" className="text-white max-md:hidden">
+              <Link to="https://www.youtube.com/@goal2moon" className="text-white max-md:hidden">
                 <FaYoutube size={24} />
               </Link>
-              <Link to="https://x.com/LiveLikeKong" className="text-white max-md:hidden">
+              <Link to="https://x.com/@GoalToTheMoon" className="text-white max-md:hidden">
                 <FaXTwitter size={24} />
               </Link>
-              <Link to="https://www.tiktok.com/@livelikekong" className="text-white max-md:hidden">
+              <Link to="https://www.tiktok.com/@goal2moon" className="text-white max-md:hidden">
                 <FaTiktok size={24} />
               </Link>
             </div>
 
             {/* Mobile Dropdown Menu */}
             <div className="md:hidden flex gap-5 items-center">
-              <Link to="https://www.youtube.com/@livelikekong" className="text-white">
+              <Link to="https://www.youtube.com/@goal2moon" className="text-white">
                 <FaYoutube size={24} />
               </Link>
-              <Link to="https://x.com/LiveLikeKong" className="text-white">
+              <Link to="https://x.com/@GoalToTheMoon" className="text-white">
                 <FaXTwitter size={24} />
               </Link>
-              <Link to="https://www.tiktok.com/@livelikekong" className="text-white">
+              <Link to="https://www.tiktok.com/@goal2moon" className="text-white">
                 <FaTiktok size={24} />
               </Link>
               <Dropdown

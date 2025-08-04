@@ -53,15 +53,14 @@ body {
 }
 
 .hero-bg {
-  background-image: linear-gradient(rgba(4, 16, 8, 0.6), rgba(4, 16, 8, 0.6)),
-    url("/images/hero-bg.png");
+  background-image: url("/images/hero-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .hero-title {
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); */
 }
 
 .hero-content {

@@ -7,6 +7,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { MdSearch } from "react-icons/md";
 import "@/styles/posts.css";
+import Brand from "@/components/Home/Brand";
 
 interface DataItem {
   category_id: number;
@@ -110,63 +111,70 @@ const HomePage = () => {
   return (
     <div className="font-inter">
       <Hero />
-      <div className="bg-gradient-to-b from-[#031008] to-[#000701]">
-        <Music />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-10 px-4 py-10 pb-16 text-center md:space-y-20 md:py-20 md:pb-32">
-            <h1 className="text-4xl font-black text-[#C6A353]/80 sm:text-5xl md:text-6xl lg:text-[64px]">
-              Latest Posts
-            </h1>
-            <div className="flex flex-col items-center justify-between gap-6 lg:flex-row lg:items-start lg:gap-10">
+      <Brand />
+      <Music />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="space-y-10 px-4 py-10 pb-16 text-center md:space-y-20 md:py-20 md:pb-32">
+          <h1 className="music-title mt-8 text-xl font-black text-white sm:text-2xl md:text-3xl lg:text-4xl ">
+            Latest Posts
+          </h1>
+          <div className="flex flex-col items-center justify-between gap-6 lg:flex-row lg:items-start lg:gap-10">
+            <div className="space-y-5 flex-1">
+              <div className="flex items-center justify-between">
+                <Select
+                  defaultValue={"latest"}
+                  onChange={handleCategory}
+                  className="h-10 w-[250px] text-left text-sm md:h-12 md:text-base"
+                  options={[
+                    {
+                      value: "latest",
+                      label: "Latest",
+                    },
+                    {
+                      value: "popular",
+                      label: "Popular",
+                    },
+                  ]}
+                ></Select>
+                <div className="relative w-[250px]">
+                  <input
+                    id="search-bar"
+                    type="text"
+                    placeholder="Search"
+                    className="h-10 w-full rounded-lg pl-4 pr-8 text-sm text-white/90 placeholder:text-[#808080] focus:outline-none md:h-12 md:text-base border border-[#1A7CFF] bg-[#1A7CFF]/10"
+                    onChange={(e) => handleChange(e.target.value)}
+                    onKeyDown={(e) => handleSearch(e)}
+                  />
+                  <MdSearch className="absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 md:h-4 md:w-4 text-white" />
+                </div>
+              </div>
               <Posts
                 allData={allData}
                 totalCount={totalCount}
                 onChange={onChange}
               />
-              <div className="w-full shrink-0 space-y-6 md:space-y-[30px] lg:w-[350px]">
-                <div className="rounded-[20px] bg-[#0E2115] px-6 py-8 md:px-12 md:py-10 space-y-5">
-                  <div className="relative w-full">
-                    <input
-                      id="search-bar"
-                      type="text"
-                      placeholder="Search"
-                      className="h-10 w-full rounded-full border border-[#313131] bg-[#031008] pl-4 pr-8 text-sm text-white/90 placeholder:text-[#808080] md:h-12 md:text-base focus:outline-none"
-                      onChange={(e) => handleChange(e.target.value)}
-                      onKeyDown={(e) => handleSearch(e)}
-                    />
-                    <MdSearch className="absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 md:h-4 md:w-4" />
-                  </div>
-                  <Select
-                    defaultValue={"latest"}
-                    onChange={handleCategory}
-                    className="h-10 w-full text-left text-sm md:h-12 md:text-base"
-                    options={[
-                      {
-                        value: "latest",
-                        label: "Latest",
-                      },
-                      {
-                        value: "popular",
-                        label: "Popular",
-                      },
-                    ]}
-                  ></Select>
-                </div>
-                <div className="rounded-[20px] bg-white p-4 md:p-5">
-                  <iframe
-                    className="widget_preview_iframe"
-                    frameBorder="0"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    scrolling="no"
-                    style={{visibility: 'visible', width: '100%', height: '723px'}}
-                    src="https://www.feedspot.com/widgets/lookup/M1fC72ff768c"
-                  ></iframe>
-                </div>
+            </div>
+            <div className="w-full shrink-0 space-y-6 md:space-y-[30px] lg:w-[350px]">
+              <div className="rounded-[20px] bg-[#1A7CFF33] p-4 md:p-5 border border-[#1A7CFF]">
+                <iframe
+                  className="widget_preview_iframe"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  scrolling="no"
+                  style={{
+                    visibility: "visible",
+                    width: "100%",
+                    height: "723px",
+                  }}
+                  src="https://www.feedspot.com/widgets/lookup/M1fC72ff768c"
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
+        <div className="absolute left-0 top-20 h-[400px] w-[400px] -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(26,124,255,0.5)_0%,rgba(26,124,255,0)_100%)] sm:h-[600px] sm:w-[600px] pointer-events-none"></div>
+        <div className="absolute right-0 top-20 h-[400px] w-[400px] translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(26,124,255,0.5)_0%,rgba(26,124,255,0)_100%)] sm:h-[600px] sm:w-[600px] pointer-events-none"></div>
       </div>
     </div>
   );

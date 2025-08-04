@@ -1,1 +1,1 @@
-export const basic_url = `https://livelikekong.ngrok.app/api/v1/`
+export const basic_url = `https://goalmoonshoot.ngrok.app/api/v1/`
